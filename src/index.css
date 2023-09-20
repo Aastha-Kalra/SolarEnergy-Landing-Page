@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fade-anim img{
+  animation: fadeAnim 0.9s ease-in;
+}
+
+@keyframes fadeAnim{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.slide-anim img{
+  animation: slideAnim 0.9s ease-in;
+}
+
+@keyframes slideAnim{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.arrow{
+  animation: bounce 0.9s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.2, .05, .74, 1);
+  animation-iteration-count: infinite;
+}
+@keyframes bounce{
+  from {
+    transform: translate3d(0, 0, 0);
+}
+to {
+    transform: translate3d(0, 20px, 0);
+}
+}
+
+.active{
+  color: rgb(2 132 199 );
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
